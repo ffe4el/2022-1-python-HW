@@ -145,7 +145,7 @@ def gdd(dates, tavg):
 
 
 def main():
-    filename = "../code.weather(146)_2020-2020.csv"
+    filename = "./code.weather(146)_2020-2020.csv"
     download(filename)
     f = open(filename)
     lines = f.readlines()
