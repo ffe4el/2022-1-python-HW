@@ -137,8 +137,8 @@ df_popkrFT.head(3)
 def plot_pop(loc, popmax, poptick):
     fig, axs = plt.subplots(ncols=2, sharey=True, figsize=(10, 5), gridspec_kw={"wspace": 0})
 
-    c_M = "green"
-    c_F = "darkorange"
+    c_M = "indigo"
+    c_F = "salmon"
     axs[0].barh(df_popkrMT["나이"], df_popkrMT[loc], color=c_M)
     axs[1].barh(df_popkrFT["나이"], df_popkrFT[loc], color=c_F)
 
@@ -192,11 +192,17 @@ def main():
     elif loc == "전라북도전주시덕진구" or loc =="전라북도전주시완산구" or loc =="전라북도군산시" or loc =="전라북도익산시":
         popmax = 3.5e4
         poptick = 5e3
-    elif loc == "전라북도정읍시" or loc =="전라북도남원시" or loc =="전라북도김제시" or loc =="전라북도완주군":
+    elif loc =="전라북도남원시" or loc =="전라북도김제시" or loc =="전라북도완주군":
         popmax=1e4
         poptick=2e3
-    elif loc == "전라북도진안군" or loc =="전라북도무주군" or loc =="전라북도장수군" or loc =="전라북도임실군" or loc =="전라북도순창군" or loc =="전라북도고창군" or loc =="전라북도부안군":
+    elif loc == "전라북도정읍시":
+        popmax=1.2e4
+        poptick=2e3
+    elif loc == "전라북도진안군" or loc =="전라북도무주군" or loc =="전라북도장수군" or loc =="전라북도임실군" or loc =="전라북도순창군" :
         popmax=4e3
+        poptick=1e3
+    elif loc == "전라북도고창군" or loc == "전라북도부안군" :
+        popmax=6e3
         poptick=1e3
 
     fig = plot_pop(loc, popmax, poptick)
