@@ -51,7 +51,7 @@ def count_temp(tavg_history,year):
         tavg_history_value = float(tavg_history[i])
         if tavg_history[i] > tavg_history[year-1982]:
             total += 1
-    return total+1
+    return total
 
 
 
