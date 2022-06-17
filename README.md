@@ -6,7 +6,7 @@
 ### 202116266 김솔아
 #### 좌충우돌 파이썬
 
-</
+p
 
 
   ![python image](https://bygritmind.files.wordpress.com/2020/12/image-4.png?w=1024)
